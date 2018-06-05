@@ -2,9 +2,8 @@ var summ = 0;
 
 do{
   var c = prompt('Укажите число');
-  if(Number(c) !== NaN) summ = summ + Number(c);
-  console.log(summ);
+  if(+c) summ = summ + Number(c);
   if(c===null) break;
-}while(c != 3)
+}while(true)
 
 alert(summ);
