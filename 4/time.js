@@ -48,6 +48,29 @@ switch (day) {
 }
 
 var hour = allDate.getHours();
+var hourEnd;
+if(hour == 1 || hour == 21) hourEnd = 'час';
+  else if (1 < hour && hour < 5) hourEnd = 'часа';
+  else if (21 < hour && hour < 24) hourEnd = 'часа';
+  else hourEnd = 'часов';
+
 var minutes = allDate.getMinutes();
+var minutesEnd;
+if(minutes == 1 || minutes == 21 || minutes == 31 || minutes == 41 || minutes == 51) minutesEnd = 'минута';
+  else if (1 < minutes && minutes < 5) minutesEnd = 'минуты';
+  else if (21 < minutes && minutes < 25) minutesEnd = 'минуты';
+  else if (31 < minutes && minutes < 35) minutesEnd = 'минуты';
+  else if (41 < minutes && minutes < 45) minutesEnd = 'минуты';
+  else if (51 < minutes && minutes < 55) minutesEnd = 'минуты';
+  else minutesEnd = 'минут';
+
 var seconds = allDate.getSeconds();
-console.log(`Сегодня ${date} ${month} ${year} года, ${day}, ${hour} часов ${minutes} минут ${seconds} секунды».`)
+var secondsEnd;
+if(seconds == 1 || seconds == 21 || seconds == 31 || seconds == 41 || seconds == 51) secondsEnd = 'секунда';
+  else if (1 < seconds && seconds < 5) secondsEnd = 'секунды';
+  else if (21 < seconds && seconds < 25) secondsEnd = 'секунды';
+  else if (31 < seconds && seconds < 35) secondsEnd = 'секунды';
+  else if (41 < seconds && seconds < 45) secondsEnd = 'секунды';
+  else if (51 < seconds && seconds < 55) secondsEnd = 'секунды';
+  else secondsEnd = 'секунд';
+console.log(`Сегодня ${date} ${month} ${year} года, ${day}, ${hour} ${hourEnd} ${minutes} ${minutesEnd} ${seconds} ${secondsEnd}.`)
