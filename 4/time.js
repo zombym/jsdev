@@ -73,4 +73,5 @@ if(seconds == 1 || seconds == 21 || seconds == 31 || seconds == 41 || seconds ==
   else if (41 < seconds && seconds < 45) secondsEnd = 'секунды';
   else if (51 < seconds && seconds < 55) secondsEnd = 'секунды';
   else secondsEnd = 'секунд';
+  
 console.log(`Сегодня ${date} ${month} ${year} года, ${day}, ${hour} ${hourEnd} ${minutes} ${minutesEnd} ${seconds} ${secondsEnd}.`)
